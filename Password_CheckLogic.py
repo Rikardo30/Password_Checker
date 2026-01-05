@@ -32,16 +32,16 @@ def strength_suggestions(password):
     suggestions = []
 
     if len(password) < 8:
-        suggestions.append("Use at least 8 characters.")
+        suggestions.append("Use at least 8 characters")
 
     if sum(char.isdigit() for char in password) < 2:
-        suggestions.append("Include at least 2 integers.")
+        suggestions.append("Include at least 2 integers")
 
     if sum(char.isupper() for char in password) < 2:
-        suggestions.append("Include at least 2 uppercase letters.")
+        suggestions.append("Include at least 2 uppercase letters")
 
     if not any(char in '!@#$%^&*()-_=+,.' for char in password):
-        suggestions.append("Add at least 1 special character such as !@#$%^&*()-_=+,.")
+        suggestions.append("Add at least 1 special character such as !@#$%^&*()-_=+,")
     return suggestions
 
 # The following function provides a randomized stronger password.
