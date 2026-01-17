@@ -42,6 +42,9 @@ def strength_suggestions(password):
 
     if not any(char in '!@#$%^&*()-_=+,.' for char in password):
         suggestions.append("Add at least 1 special character such as !@#$%^&*()-_=+,")
+
+    if check_password_strength(password) == "Strong":
+        suggestions.append("Your password is strong. No suggestions needed.")
     return suggestions
 
 # The following function provides a randomized stronger password.
